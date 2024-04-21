@@ -34,7 +34,7 @@ export default function App() {
 
         <div className="hero-image-cover">
           <img
-            src="./assets/Avatar.jpg"
+            src="./src/assets/Avatar.jpg"
             alt="profile-image"
             className="profile-image"
           />
