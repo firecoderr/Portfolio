@@ -20,7 +20,7 @@ export default function App() {
         </div>
 
         <div className="hero-text">
-          <h1>Ulugbek Akhmedov</h1>
+          <h1>Ulugbek</h1>
           <div className="frontend-text">
             <div className="line"></div>
             <p>Front-End</p>
