@@ -95,7 +95,7 @@ export default function App() {
       <section className="project-section">
         <div className="project-top">
           <h2>Projects</h2>
-          <div className="project-category all">
+          <div className={`project-category ` + procategory}>
             <div
               onClick={() => {
                 setProcategory("all");

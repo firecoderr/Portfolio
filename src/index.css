@@ -427,6 +427,8 @@ section {
   padding: 5px 0px;
 
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
 .project-category div:hover {

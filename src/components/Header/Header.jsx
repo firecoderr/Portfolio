@@ -5,7 +5,11 @@ import "./Header.css";
 export default function Header() {
   const [toggle, setToggle] = useState(false);
 
-  console.log(toggle);
+  const [scroll, setScroll] = useState(false);
+
+  window.addEventListener("scroll", (event) => {
+    console.log(event.target);
+  });
 
   return (
     <>
