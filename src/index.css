@@ -342,6 +342,7 @@ section {
   border-radius: 20px;
 
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .skill-item:hover {
