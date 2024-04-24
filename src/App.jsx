@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header/Header";
+import Avatar from "../public/Avatar.jpg";
 
 export default function App() {
   const [procategory, setProcategory] = useState("all");
@@ -35,11 +36,7 @@ export default function App() {
         </div>
 
         <div className="hero-image-cover">
-          <img
-            src="./public/Avatar.jpg"
-            alt="profile-image"
-            className="profile-image"
-          />
+          <img src={Avatar} alt="profile-image" className="profile-image" />
         </div>
       </div>
 
