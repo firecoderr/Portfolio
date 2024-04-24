@@ -281,7 +281,8 @@ p {
 }
 
 /* About Section */
-.about-section {
+.about-section,
+section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -325,15 +326,14 @@ p {
 }
 
 .skill-item-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .skill-item {
   border: 1px solid grey;
-  width: 32%;
   height: 150px;
 
   display: flex;
@@ -396,4 +396,54 @@ p {
   width: 100px;
 }
 
+/* Project Section */
+.project-section {
+}
 
+.project-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.project-section h2 {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.project-category {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 3px;
+}
+
+.project-category div {
+  border-bottom: 3px solid transparent;
+  width: 110px;
+  text-align: center;
+  padding: 5px 0px;
+
+  cursor: pointer;
+}
+
+.project-category div:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.project-category.all div:nth-child(1) {
+  border-bottom-color: rgb(103, 204, 255);
+  background-color: rgb(230, 230, 230);
+}
+
+.project-category.react div:nth-child(2) {
+  border-bottom-color: rgb(103, 204, 255);
+  background-color: rgb(230, 230, 230);
+}
+
+.project-category.framer div:nth-child(3) {
+  border-bottom-color: rgb(103, 204, 255);
+  background-color: rgb(230, 230, 230);
+}

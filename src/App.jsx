@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 
 export default function App() {
+  const [procategory, setProcategory] = useState("all");
+
   return (
     <>
       <Header></Header>
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <div className="hero-section">
         {/* Social Medias */}
         <div className="social-medias">
           <a href="#" className="media-links">
@@ -34,12 +36,12 @@ export default function App() {
 
         <div className="hero-image-cover">
           <img
-            src="./src/assets/Avatar.jpg"
+            src="./public/Avatar.jpg"
             alt="profile-image"
             className="profile-image"
           />
         </div>
-      </section>
+      </div>
 
       {/* About Section */}
       <section className="about-section">
@@ -96,6 +98,29 @@ export default function App() {
       <section className="project-section">
         <div className="project-top">
           <h2>Projects</h2>
+          <div className="project-category all">
+            <div
+              onClick={() => {
+                setProcategory("all");
+              }}
+            >
+              <p>All</p>
+            </div>
+            <div
+              onClick={() => {
+                setProcategory("react");
+              }}
+            >
+              <p>ReactJS</p>
+            </div>
+            <div
+              onClick={() => {
+                setProcategory("framer");
+              }}
+            >
+              <p>Framer</p>
+            </div>
+          </div>
         </div>
       </section>
     </>
