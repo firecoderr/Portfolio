@@ -1,19 +1,30 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
 
-  const [scroll, setScroll] = useState(false);
+  // const [scroll, setScroll] = useState(false);
 
-  window.addEventListener("scroll", (event) => {
-    console.log(event.target);
-  });
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 80;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <header>
+      <header className={scrolled ? "scroll" : ""}>
         <div className="header-container">
           <a href="#" className="header-logo">
             Ulugbek
