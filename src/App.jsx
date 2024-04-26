@@ -55,14 +55,16 @@ export default function App() {
 
         {/* Front-End Sklills */}
         <div
-          onClick={() => {
-            setSkills({ ...skills, frontend: !skills.frontend });
-          }}
           className={
             skills.frontend ? "skills frontend open" : "skills frontend"
           }
         >
-          <div className="toggle-skills">
+          <div
+            onClick={() => {
+              setSkills({ ...skills, frontend: !skills.frontend });
+            }}
+            className="toggle-skills"
+          >
             <h3>Skills</h3>
 
             <i class="fa-solid fa-plus"></i>
@@ -105,13 +107,13 @@ export default function App() {
         </div>
 
         {/* No Code Skills */}
-        <div
-          onClick={() => {
-            setSkills({ ...skills, nocode: !skills.nocode });
-          }}
-          className={skills.nocode ? "skills nocode open" : "skills nocode"}
-        >
-          <div className="toggle-skills">
+        <div className={skills.nocode ? "skills nocode open" : "skills nocode"}>
+          <div
+            onClick={() => {
+              setSkills({ ...skills, nocode: !skills.nocode });
+            }}
+            className="toggle-skills"
+          >
             <h3>No Code Skills</h3>
 
             <i class="fa-solid fa-plus"></i>
