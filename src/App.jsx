@@ -4,6 +4,7 @@ import Avatar from "../public/Avatar.jpg";
 
 export default function App() {
   const [procategory, setProcategory] = useState("all");
+  const [skills, setSkills] = useState({ frontend: true, nocode: false });
 
   return (
     <>
@@ -52,8 +53,21 @@ export default function App() {
           </p>
         </div>
 
-        <div className="skills">
-          <h3>Skills</h3>
+        {/* Front-End Sklills */}
+        <div
+          onClick={() => {
+            setSkills({ ...skills, frontend: !skills.frontend });
+          }}
+          className={
+            skills.frontend ? "skills frontend open" : "skills frontend"
+          }
+        >
+          <div className="toggle-skills">
+            <h3>Skills</h3>
+
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
           <div className="skill-item-container">
             <div className="skill-item">
               <i class="fa-brands fa-html5"></i>
@@ -87,6 +101,58 @@ export default function App() {
               />
               <h2>Tailwindcss</h2>
             </div>
+          </div>
+        </div>
+
+        {/* No Code Skills */}
+        <div
+          onClick={() => {
+            setSkills({ ...skills, nocode: !skills.nocode });
+          }}
+          className={skills.nocode ? "skills nocode open" : "skills nocode"}
+        >
+          <div className="toggle-skills">
+            <h3>No Code Skills</h3>
+
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div className="skill-item-container">
+            <a href="https://www.framer.com" className="skill-item">
+              {/* <i class="fa-brands fa-html5"></i> */}
+              <img
+                src="https://www.svgrepo.com/show/364527/framer-logo-fill.svg"
+                alt="framer"
+              />
+              <h2>
+                Framer
+                <i class="fa-solid fa-arrow-right"></i>
+              </h2>
+            </a>
+
+            <a href="https://www.figma.com/de" className="skill-item">
+              {/* <i class="fa-brands fa-css3-alt"></i> */}
+              <img
+                src="https://static-00.iconduck.com/assets.00/figma-icon-1024x1024-mvfh9xsk.png"
+                alt="tilda"
+              />
+              <h2>
+                Figma
+                <i class="fa-solid fa-arrow-right"></i>
+              </h2>
+            </a>
+
+            <a href="https://tilda.cc/de" className="skill-item">
+              {/* <i class="fa-brands fa-css3-alt"></i> */}
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Tilda_Logo.png"
+                alt="tilda"
+              />
+              <h2>
+                Tilda
+                <i class="fa-solid fa-arrow-right"></i>
+              </h2>
+            </a>
           </div>
         </div>
       </section>

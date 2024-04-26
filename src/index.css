@@ -287,7 +287,7 @@ section {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 
   max-width: 1200px;
   width: 100%;
@@ -318,11 +318,94 @@ section {
 .skills {
   max-width: 750px;
   width: 100%;
+  /* border-top: 1px solid grey; */
+  padding-top: 10px;
+}
+
+/* Toggle Skills */
+.toggle-skills {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.toggle-skills:hover {
+  background-color: rgb(222, 222, 222);
+}
+
+.toggle-skills .fa-plus {
+  color: rgb(66, 66, 66);
+  font-size: 20px;
+}
+
+.skills.frontend .fa-plus {
+  transform: rotate(45deg);
+}
+
+/* Framer Skills */
+.skills.nocode img {
+  max-width: 80px;
+}
+
+.skills.nocode .fa-arrow-right {
+  margin-left: 10px;
+}
+
+.skills.nocode .skill-item:hover:nth-child(1) {
+  background-color: rgb(0, 217, 255);
+}
+
+.skills.nocode .skill-item:hover:nth-child(2) {
+  background-color: #f76d5eff;
+}
+
+.skills.nocode .skill-item:hover:nth-child(3) {
+  background-color: #ee9a66ff;
+}
+
+/* Toggle Sklills Function */
+/* Fronten */
+.skills.frontend .fa-plus {
+  transform: rotate(0);
+}
+
+.skills.frontend .skill-item-container {
+  height: 0;
+}
+
+.skills.frontend.open .fa-plus {
+  transform: rotate(45deg);
+}
+
+.skills.frontend.open .skill-item-container {
+  height: fit-content;
+}
+
+/* Nocode */
+.skills.nocode .fa-plus {
+  transform: rotate(0);
+}
+
+.skills.nocode .skill-item-container {
+  height: 0;
+}
+
+.skills.nocode.open .fa-plus {
+  transform: rotate(45deg);
+}
+
+.skills.nocode.open .skill-item-container {
+  height: fit-content;
 }
 
 .skills h3 {
   opacity: 0.7;
-  margin-bottom: 20px;
+  /* margin-bottom: 10px; */
 }
 
 .skill-item-container {
@@ -330,6 +413,10 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   flex-wrap: wrap;
   gap: 10px;
+  /* border-bottom: 1px solid grey; */
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .skill-item {
