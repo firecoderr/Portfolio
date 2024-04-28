@@ -19,7 +19,7 @@ header {
 header.scroll {
   /* box-shadow: 0 0 10px grey; */
   height: 80px;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(46, 46, 46);
   color: white;
 }
 
@@ -99,6 +99,7 @@ header nav ul {
 
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
+    border-left: 1px solid white;
 
     transition: 0.2s;
   }

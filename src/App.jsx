@@ -3,8 +3,45 @@ import Header from "./components/Header/Header";
 import Avatar from "../public/Avatar.jpg";
 
 export default function App() {
-  const [procategory, setProcategory] = useState("all");
+  const [procategory, setProcategory] = useState("All");
+
   const [skills, setSkills] = useState({ frontend: true, nocode: false });
+
+  const projects = [
+    {
+      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
+      title: "XMoves",
+      category: "ReactJS",
+      filter: "All ReactJS",
+      demoLink: "framer.io",
+    },
+
+    {
+      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
+      title: "Shop",
+      filter: "All ReactJS",
+      category: "ReactJS",
+      demoLink: "framer.io",
+    },
+
+    {
+      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
+      title: "XMoves",
+      filter: "All Framer",
+      category: "Framer",
+      demoLink: "framer.io",
+    },
+  ];
+
+  const filteredProject = projects.filter((item) => {
+    if (procategory === "All") {
+      return item.filter.includes("");
+    } else {
+      return item.filter.includes(procategory);
+    }
+  });
+
+  console.log(filteredProject);
 
   return (
     <>
@@ -166,26 +203,49 @@ export default function App() {
           <div className={`project-category ` + procategory}>
             <div
               onClick={() => {
-                setProcategory("all");
+                setProcategory("All");
               }}
             >
               <p>All</p>
             </div>
             <div
               onClick={() => {
-                setProcategory("react");
+                setProcategory("ReactJS");
               }}
             >
               <p>ReactJS</p>
             </div>
             <div
               onClick={() => {
-                setProcategory("framer");
+                setProcategory("Framer");
               }}
             >
               <p>Framer</p>
             </div>
           </div>
+        </div>
+
+        <div className="project-container">
+          {filteredProject.map((item) => (
+            <div
+              className="project-item"
+              key={`project-item-${crypto.randomUUID()}`}
+            >
+              <img src={item.img} alt="project-image" />
+              <div className="top-text">
+                <h3>{item.title}</h3>
+                <div className="project-category">
+                  <p>{item.category}</p>
+                </div>
+              </div>
+              <a href={item.demoLink}>
+                <button>
+                  <p>view demo</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </a>
+            </div>
+          ))}
         </div>
       </section>
     </>

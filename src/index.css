@@ -386,6 +386,10 @@ section {
   height: fit-content;
 }
 
+.skills.frontend.open .toggle-skills {
+  background-color: rgb(222, 222, 222);
+}
+
 /* Nocode */
 .skills.nocode .fa-plus {
   transform: rotate(0);
@@ -403,6 +407,10 @@ section {
   height: fit-content;
 }
 
+.skills.nocode.open .toggle-skills {
+  background-color: rgb(222, 222, 222);
+}
+
 .skills h3 {
   opacity: 0.7;
   /* margin-bottom: 10px; */
@@ -411,7 +419,6 @@ section {
 .skill-item-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  flex-wrap: wrap;
   gap: 10px;
   /* border-bottom: 1px solid grey; */
   height: 0;
@@ -523,17 +530,99 @@ section {
   background-color: rgb(230, 230, 230);
 }
 
-.project-category.all div:nth-child(1) {
+.project-category.All div:nth-child(1) {
   border-bottom-color: rgb(103, 204, 255);
   background-color: rgb(230, 230, 230);
 }
 
-.project-category.react div:nth-child(2) {
+.project-category.ReactJS div:nth-child(2) {
   border-bottom-color: rgb(103, 204, 255);
   background-color: rgb(230, 230, 230);
 }
 
-.project-category.framer div:nth-child(3) {
+.project-category.Framer div:nth-child(3) {
   border-bottom-color: rgb(103, 204, 255);
   background-color: rgb(230, 230, 230);
+}
+
+/* Project Container */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  max-width: 800px;
+  width: 100%;
+
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.project-item {
+  border: 1px solid rgb(206, 206, 206);
+
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 20px;
+
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-item .top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.project-item h3 {
+  font-weight: 700;
+}
+
+.project-item .project-category {
+  background-color: rgb(29, 29, 29);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.project-item .project-category p {
+  font-size: 13px;
+  color: white;
+  letter-spacing: 0.6px;
+}
+
+.project-item button {
+  display: flex;
+  gap: 8px;
+
+  background-color: transparent;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-item button:hover {
+  gap: 20px;
+}
+
+.project-item button:hover *,
+.project-item button:hover .fa-solid {
+  color: black;
+}
+
+.project-item button p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.project-item button .fa-solid {
+  color: rgba(0, 0, 0, 0.4);
 }
