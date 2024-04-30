@@ -26,33 +26,28 @@ export default function Header() {
     <>
       <header className={scrolled ? "scroll" : ""}>
         <div className="header-container">
-          <a href="#" className="header-logo">
+          <a href="\" className="header-logo">
             Ulugbek
           </a>
 
           <nav className={toggle ? "open" : ""}>
             <ul>
-              <li>
+              <li onClick={() => setToggle(false)}>
                 <a href="#" className="nav-link">
                   home
                 </a>
               </li>
-              <li>
-                <a href="#" className="nav-link">
+              <li onClick={() => setToggle(false)}>
+                <a href="#about" className="nav-link">
                   about
                 </a>
               </li>
-              <li>
-                <a href="#" className="nav-link">
+              <li onClick={() => setToggle(false)}>
+                <a href="#projects" className="nav-link">
                   projects
                 </a>
               </li>
-              <li>
-                <a href="#" className="nav-link">
-                  skills
-                </a>
-              </li>
-              <li>
+              <li onClick={() => setToggle(false)}>
                 <a href="#" className="nav-link">
                   contacts
                 </a>

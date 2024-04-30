@@ -35,7 +35,7 @@ export default function Home() {
     },
 
     {
-      img: "allshop.jpg",
+      img: "./public/allshop.jpg",
       title: "AllShop",
       filter: "All ReactJS",
       category: "ReactJS",
@@ -49,7 +49,7 @@ export default function Home() {
     },
 
     {
-      img: "mulih.jpg",
+      img: "./public/mulih.jpg",
       title: "Mulih",
       filter: "All Framer",
       category: "Framer",
@@ -62,7 +62,7 @@ export default function Home() {
     },
 
     {
-      img: "nature-skin.jpg",
+      img: "./public/nature-skin.jpg",
       title: "NatureSkin",
       filter: "All Framer",
       category: "Framer",
@@ -90,11 +90,21 @@ export default function Home() {
       <div className="hero-section">
         {/* Social Medias */}
         <div className="social-medias">
-          <a href="#" className="media-links">
+          <a
+            href="https://www.instagram.com/ulugbekk.a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="media-links"
+          >
             <p>Instagram</p>
             <i className="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" className="media-links">
+          <a
+            href="https://github.com/firecoderr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="media-links"
+          >
             <p>Github</p>
             <i className="fa-brands fa-github"></i>
           </a>
@@ -118,125 +128,45 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <section className="about-section">
+      <section className="about-section" id="about">
         <div className="about-top">
           <h2>About</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-            praesentium sequi obcaecati corporis amet quas ipsum incidunt nemo
-            eveniet cumque id numquam tempore reiciendis, quod ullam eaque fugit
-            nulla possimus!
-          </p>
-        </div>
-
-        {/* Front-End Sklills */}
-        <div
-          className={
-            skills.frontend ? "skills frontend open" : "skills frontend"
-          }
-        >
-          <div
-            onClick={() => {
-              setSkills({ ...skills, frontend: !skills.frontend });
-            }}
-            className="toggle-skills"
-          >
-            <h3>Skills</h3>
-
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div className="skill-item-container">
-            <div className="skill-item">
-              <i class="fa-brands fa-html5"></i>
-              <h2>HTML5</h2>
-            </div>
-
-            <div className="skill-item">
-              <i class="fa-brands fa-css3-alt"></i>
-              <h2>CSS3</h2>
-            </div>
-
-            <div className="skill-item">
-              <i class="fa-brands fa-js"></i>
-              <h2>JavaScript</h2>
-            </div>
-
-            <div className="skill-item">
-              <i class="fa-brands fa-react"></i>
-              <h2>ReactJS</h2>
-            </div>
-
-            <div className="skill-item">
-              <i class="fa-brands fa-bootstrap"></i>
-              <h2>Bootstrap 5</h2>
-            </div>
-
-            <div className="skill-item">
-              <img
-                src="https://www.svgrepo.com/show/333609/tailwind-css.svg"
-                alt="icon"
-              />
-              <h2>Tailwindcss</h2>
+          <div>
+            <img
+              width={280}
+              src="https://cdni.iconscout.com/illustration/premium/thumb/frontend-developer-7464456-6109659.png?f=webp"
+              alt="profile-image"
+            />
+            <div>
+              <h2>"Passionate Developer"</h2>
+              <p>
+                My name is Ulugbek, and I'm a proficient frontend developer
+                dedicated to crafting user-friendly digital experiences. With a
+                keen eye for design and a passion for coding, I specialize in
+                creating elegant and intuitive websites and applications. My
+                commitment to excellence ensures that I deliver high-quality
+                results that meet my clients' needs effectively.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* No Code Skills */}
-        <div className={skills.nocode ? "skills nocode open" : "skills nocode"}>
-          <div
-            onClick={() => {
-              setSkills({ ...skills, nocode: !skills.nocode });
-            }}
-            className="toggle-skills"
-          >
-            <h3>No Code Skills</h3>
-
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div className="skill-item-container">
-            <a href="https://www.framer.com" className="skill-item">
-              {/* <i class="fa-brands fa-html5"></i> */}
-              <img
-                src="https://www.svgrepo.com/show/364527/framer-logo-fill.svg"
-                alt="framer"
-              />
-              <h2>
-                Framer
-                <i class="fa-solid fa-arrow-right"></i>
-              </h2>
-            </a>
-
-            <a href="https://www.figma.com/de" className="skill-item">
-              {/* <i class="fa-brands fa-css3-alt"></i> */}
-              <img
-                src="https://static-00.iconduck.com/assets.00/figma-icon-1024x1024-mvfh9xsk.png"
-                alt="tilda"
-              />
-              <h2>
-                Figma
-                <i class="fa-solid fa-arrow-right"></i>
-              </h2>
-            </a>
-
-            <a href="https://tilda.cc/de" className="skill-item">
-              {/* <i class="fa-brands fa-css3-alt"></i> */}
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Tilda_Logo.png"
-                alt="tilda"
-              />
-              <h2>
-                Tilda
-                <i class="fa-solid fa-arrow-right"></i>
-              </h2>
-            </a>
-          </div>
+        {/* Skills */}
+        <div class="skill-section">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzydXo9YYB2dFu_6O_b8SsY4u2ZTVOiG9OwT798zyGxQ&s" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png" />
+          <img src="https://w7.pngwing.com/pngs/887/757/png-transparent-framer-logos-brands-icon-thumbnail.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Tilda_Logo.png" />
         </div>
       </section>
 
       {/* Project Section */}
-      <section className="project-section">
+      <section className="project-section" id="projects">
         <div className="project-top">
           <h2>Projects</h2>
           <div className={`project-category ` + procategory}>

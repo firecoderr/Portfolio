@@ -24,6 +24,10 @@ p {
   font-weight: 500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hero-Section ********************************************************/
 .hero-section {
   display: flex;
@@ -117,10 +121,11 @@ p {
   }
 
   .social-medias {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 100;
     gap: 2px;
   }
 
@@ -305,9 +310,11 @@ section {
 }
 
 .about-top p {
-  max-width: 750px;
-  line-height: 23px;
-  text-align: justify;
+  /* max-width: 750px; */
+  line-height: 25px;
+  font-size: 16px;
+  color: rgb(119, 119, 119);
+  /* text-align: justify; */
 }
 
 .about-top h2 {
@@ -320,6 +327,31 @@ section {
   width: 100%;
   /* border-top: 1px solid grey; */
   padding-top: 10px;
+}
+
+.about-top > div {
+  display: flex;
+  align-items: center;
+  max-width: 750px;
+}
+
+@media (max-width: 650px) {
+  .about-top > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.about-top > div div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-top > div div h2 {
+  color: black;
+  opacity: 1;
+  text-transform: uppercase;
 }
 
 /* Toggle Skills */
@@ -489,6 +521,25 @@ section {
 
 .skill-item img {
   width: 100px;
+}
+
+/* New Skill Style */
+.skill-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+  max-width: 420px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.skill-section img {
+  display: block;
+  height: 45px;
+  object-fit: cover;
 }
 
 /* Project Section */
