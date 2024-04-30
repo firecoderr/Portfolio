@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Avatar from "/public/Avatar.jpg";
+import Avatar from "/Avatar.jpg";
 
 export default function Home() {
   const [procategory, setProcategory] = useState("All");
@@ -9,7 +9,7 @@ export default function Home() {
 
   const projects = [
     {
-      img: "./public/movie-mix.jpg",
+      img: "movie-mix.jpg",
       title: "MovieMix",
       category: "ReactJS",
       filter: "All ReactJS",
@@ -22,7 +22,7 @@ export default function Home() {
     },
 
     {
-      img: "./public/streamline.jpg",
+      img: "streamline.jpg",
       title: "Streamline",
       filter: "All Framer",
       category: "Framer",
@@ -35,7 +35,7 @@ export default function Home() {
     },
 
     {
-      img: "./public/allshop.jpg",
+      img: "allshop.jpg",
       title: "AllShop",
       filter: "All ReactJS",
       category: "ReactJS",
@@ -49,7 +49,7 @@ export default function Home() {
     },
 
     {
-      img: "./public/mulih.jpg",
+      img: "mulih.jpg",
       title: "Mulih",
       filter: "All Framer",
       category: "Framer",
@@ -62,7 +62,7 @@ export default function Home() {
     },
 
     {
-      img: "./public/nature-skin.jpg",
+      img: "nature-skin.jpg",
       title: "NatureSkin",
       filter: "All Framer",
       category: "Framer",
