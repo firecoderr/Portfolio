@@ -9,27 +9,69 @@ export default function Home() {
 
   const projects = [
     {
-      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
-      title: "XMoves",
+      img: "./public/movie-mix.jpg",
+      title: "MovieMix",
       category: "ReactJS",
       filter: "All ReactJS",
-      demoLink: "framer.io",
+      demoLink: "https://firecoderr.github.io/movie-app/",
+      details: {
+        description: "MovieMix - movie watching room with newest movies",
+        pages: ["Home", "Movie Details", "Sign Up & Sign In", "Favourite List"],
+        techs: ["ViteJS", "React JS", "CSS3"],
+      },
     },
 
     {
-      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
-      title: "Shop",
-      filter: "All ReactJS",
-      category: "ReactJS",
-      demoLink: "framer.io",
-    },
-
-    {
-      img: "https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg",
-      title: "XMoves",
+      img: "./public/streamline.jpg",
+      title: "Streamline",
       filter: "All Framer",
       category: "Framer",
-      demoLink: "framer.io",
+      demoLink: "https://streamline-blog.framer.website/",
+      details: {
+        description: "",
+        pages: ["Home", "Details page", "Cart list", "Sign Up & Sign In"],
+        techs: ["Framer", "Figma"],
+      },
+    },
+
+    {
+      img: "./public/allshop.jpg",
+      title: "AllShop",
+      filter: "All ReactJS",
+      category: "ReactJS",
+      demoLink: "https://firecoderr.github.io/AllShop/",
+      details: {
+        description:
+          "AllShop - Ecommerce website where you can buy products, such as televisins, phones, clothes, jewelry, etc.",
+        pages: ["Home", "Movie Details", "Cart list", "Sign Up & Sign In"],
+        techs: ["ViteJS", "React JS", "BootStrap5", "AnimateCSS"],
+      },
+    },
+
+    {
+      img: "./public/mulih.jpg",
+      title: "Mulih",
+      filter: "All Framer",
+      category: "Framer",
+      demoLink: "https://mulih.framer.website/",
+      details: {
+        description: "",
+        pages: ["Home", "Details page", "Cart list", "Sign Up & Sign In"],
+        techs: ["Framer", "Figma"],
+      },
+    },
+
+    {
+      img: "./public/nature-skin.jpg",
+      title: "NatureSkin",
+      filter: "All Framer",
+      category: "Framer",
+      demoLink: "https://natureskin.framer.website/",
+      details: {
+        description: "",
+        pages: ["Home", "Details page", "Cart list", "Sign Up & Sign In"],
+        techs: ["Framer", "Figma"],
+      },
     },
   ];
 
@@ -222,9 +264,13 @@ export default function Home() {
           </div>
         </div>
 
+        {/* WORKING HERE MOMENTAN */}
         <div className="project-container">
           {filteredProject.map((item) => (
-            <div
+            <a
+              href={item.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="project-item"
               key={`project-item-${crypto.randomUUID()}`}
             >
@@ -235,13 +281,13 @@ export default function Home() {
                   <p>{item.category}</p>
                 </div>
               </div>
-              <a href={item.demoLink}>
+              {/* <a href={item.demoLink}>
                 <button>
                   <p>view demo</p>
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
-              </a>
-            </div>
+              </a> */}
+            </a>
           ))}
         </div>
       </section>
